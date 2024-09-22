@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #75d3ef;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+.title {
+  text-align: center;
+  color: #162b2f;
+  margin: 30px 0;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+.subtitle {
+  color: #212324;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.container {
+  margin: 0 auto;
+  padding: 40px;
+  max-width: 1000px;
+  background-color: #cbecf1;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.input-group {
+  margin-bottom: 25px;
+}
+.input-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.input-field:focus {
+  border-color: #3498db;
+  outline: none;
+}
+.alert {
+  background-color: #e74c3c;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+.alert-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+}
+.alert-message {
+  margin: 0;
+  font-size: 16px;
+}
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+.matrix-table td {
+  border: 1px solid #dcdcdc;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.matrix-table td:hover {
+  background-color: #aefde4;
+}
+.clicked {
+  background-color: #3498db;
+}
+.results-container {
+  display: flex;
+  flex-direction: column;
+}
+.result-section, .click-type-section, .numbers-to-string-section, .factorial-result-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.result-label {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+.result-field {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+.result-field:readonly {
+  background-color: #e9ecef;
+  color: #6c757d;
+}

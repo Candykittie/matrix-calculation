@@ -1,0 +1,40 @@
+<h1 class="title">Matrix Calculation</h1>
+<div class="container">
+  <div class="input-group">
+    <label for="inputValues" class="input-label"><h3 class="subtitle">Enter the Values</h3></label>
+    <input type="text" [(ngModel)]="inputValues" (ngModelChange)="FormMatrix()" id="inputValues" class="input-field"/>
+  </div>
+  <div *ngIf="showAlert" class="alert">
+    <img src="assets/images/Animation - 1726037780136.gif" alt="Duplictae values are entered" />
+    <p class="alert-message">{{ alertMessage }}</p>
+  </div>
+  <div *ngIf="isMatrixGenerated">
+    <table class="matrix-table">
+      <tr *ngFor="let row of matrix; let rowIndex = index">
+        <td *ngFor="let cell of row; let colIndex = index"
+            (click)="onClick(rowIndex, colIndex)"
+            [class.clicked]="clickedStates[rowIndex][colIndex]">
+          {{ cell }}
+        </td>
+      </tr>
+    </table>
+    <div class="results-container">
+      <div class="result-section">
+        <label for="result" class="result-label">Result:</label>
+        <input type="text" id="result" [value]="results" class="result-field" readonly/>
+      </div>
+      <div class="click-type-section">
+        <label for="clickType" class="result-label">Click Type:</label>
+        <input type="text" id="clickType" [value]="clicktype" class="result-field" readonly/>
+      </div>
+      <div class="numbers-to-string-section">
+        <label for="resultString" class="result-label">Numbers to String:</label>
+        <input type="text" id="resultString" [(ngModel)]="resultString" class="result-field" readonly/>
+      </div>
+      <div class="factorial-result-section">
+        <label for="factorialResult" class="result-label">Factorial Value:</label>
+        <input type="text" id="factorialResult" [(ngModel)]="factorialResult" class="result-field" readonly/>
+      </div>
+    </div>
+  </div>
+</div>
